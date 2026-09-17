@@ -12,7 +12,8 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #00838f;
+      /* Main Background Colors (Sky Blue Theme) */
+      background-color: #e0f2f1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,7 +31,7 @@
       padding: 12px 0;
     }
 
-    /* Main White Card Box */
+    /* Main Card Box */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -41,7 +42,7 @@
       padding-top: 20px;
       text-align: center;
       border: 1px solid #ccc;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .main-title {
@@ -51,7 +52,7 @@
       margin-bottom: 15px;
     }
 
-    /* User Profile Image */
+    /* Profile Image */
     .user-img {
       width: 150px;
       height: 175px;
@@ -85,7 +86,7 @@
       color: #000000;
     }
 
-    /* Blinking Green Pass Number */
+    /* Blinking Green Number */
     .blink-number {
       color: #5cb85c;
       animation: blink 1s infinite;
@@ -104,22 +105,21 @@
       margin-bottom: 15px;
     }
 
-    /* Patli Black Horizontal Line aur Vertical Center Division Line */
+    /* Light Grey/Black Borders (Original Jaise Halki Line) */
     .bottom-section {
       width: 100%;
       display: flex;
-      border-top: 1px solid #000000;
+      border-top: 1px solid #cccccc; /* Halki Horizontal Line */
       background: transparent;
     }
 
-    /* Left Signature Box (Exact 50%) */
     .sig-box {
       width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 10px;
-      border-right: 1px solid #000000;
+      border-right: 1px solid #cccccc; /* Halki Vertical Dividing Line */
     }
 
     .sig-img {
@@ -130,7 +130,6 @@
       display: block;
     }
 
-    /* Right QR Box (Exact 50%) */
     .qr-box {
       width: 50%;
       display: flex;
@@ -145,13 +144,19 @@
       display: block;
     }
 
-    .footer {
+    /* Dark Teal Bottom Footer Area */
+    .footer-wrapper {
+      width: 100%;
+      background-color: #00838f;
       margin-top: auto;
-      padding: 20px 10px;
-      color: #ffffff;
-      font-size: 13px;
-      font-style: italic;
+      padding: 25px 0;
       text-align: center;
+    }
+
+    .footer {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -162,7 +167,7 @@
   <div class="card">
     <div class="main-title">DTC And Cluster Bus Pass</div>
     
-    <!-- Profile Image -->
+    <!-- User Image -->
     <img src="profile.jpg" class="user-img" alt="Photo">
 
     <!-- Pass Info -->
@@ -175,10 +180,9 @@
       <span class="blink-number">7502042368431</span>
     </div>
     
-    <!-- Updated Dates -->
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- Black Border Box Section for Signature and QR Code -->
+    <!-- Light Border Section for Signature and QR Code -->
     <div class="bottom-section">
       <div class="sig-box">
         <img src="sig.png" class="sig-img" alt="Signature">
@@ -189,8 +193,11 @@
     </div>
   </div>
 
-  <div class="footer">
-    Copyright &#65533; - Delhi e-Governance Society 2026
+  <!-- Bottom Dark Teal Background Area -->
+  <div class="footer-wrapper">
+    <div class="footer">
+      Copyright &#65533; - Delhi e-Governance Society 2026
+    </div>
   </div>
 
 </body>
