@@ -9,108 +9,113 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #3bb2b8;
+      background-color: #17a2b8;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
     .header {
-      color: #3bb2b8;
+      color: #17a2b8;
       font-size: 22px;
       font-weight: bold;
-      margin: 20px 0 10px 0;
+      margin: 15px 0 10px 0;
       background: white;
       width: 100%;
       text-align: center;
-      padding: 12px 0;
+      padding: 10px 0;
     }
+    
+    /* White Card Area with Watermark Background */
     .card {
-      background: white;
+      background-color: #ffffff;
+      /* Watermark: Agar dtc-watermark.png image upload karenge to vahi repeated dikhegi */
+      background-image: url('dtc-watermark.png');
+      background-repeat: repeat;
+      background-size: 180px 100px;
       width: 90%;
       max-width: 650px;
-      padding: 25px 20px;
+      padding: 30px 20px;
       position: relative;
       text-align: center;
       box-sizing: border-box;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      
-      /* DTC Watermark Grid Pattern */
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Delhi_Transport_Corporation_logo.svg');
-      background-repeat: repeat;
-      background-size: 140px 90px;
-      background-blend-mode: overlay;
-      background-color: rgba(255, 255, 255, 0.94);
     }
+
     .name {
       font-size: 22px;
       font-weight: 800;
       color: #000;
       margin-top: 5px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
     .pass-type {
       font-size: 20px;
       font-weight: bold;
       color: #000;
-      margin: 18px 0 12px 0;
+      margin: 20px 0 15px 0;
     }
-    /* Green Number Blinking Effect */
-    .blink-number {
+
+    /* Bus Pass Number Section */
+    .pass-number-container {
       font-size: 24px;
       font-weight: bold;
-      color: #72b270;
-      animation: blink 1s infinite;
-      margin: 12px 0;
+      margin: 15px 0;
     }
     .pass-label {
-      color: #000;
-      font-weight: bold;
-      font-size: 24px;
+      color: #000; /* Ye constant (black) rahega */
     }
+    .blink-number {
+      color: #5cb85c; /* Sirf Number Blink Karega */
+      animation: blink 1s infinite;
+    }
+
     @keyframes blink {
       0% { opacity: 1; }
       50% { opacity: 0; }
       100% { opacity: 1; }
     }
+
     .validity {
       font-size: 20px;
       font-weight: bold;
-      color: #cc0000;
-      margin: 15px 0 25px 0;
+      color: #d9534f;
+      margin: 20px 0 30px 0;
     }
-    /* Bottom Left: User Photo & Signature Overlay */
+
+    /* Bottom Left: User Photo & Signature */
     .photo-sig-container {
       position: absolute;
       left: 20px;
-      bottom: 15px;
+      bottom: 20px;
       width: 95px;
       text-align: center;
     }
     .user-img {
-      width: 85px;
-      height: 100px;
+      width: 80px;
+      height: 95px;
       object-fit: cover;
       border: 1px solid #ccc;
     }
     .sig-img {
-      width: 90px;
-      margin-top: -10px;
+      width: 85px;
+      margin-top: -12px;
       position: relative;
       z-index: 2;
     }
+
     /* Bottom Right: QR Code */
     .qr-code {
       width: 90px;
       height: 90px;
       position: absolute;
-      bottom: 25px;
-      right: 25px;
+      bottom: 20px;
+      right: 20px;
     }
+
     .footer {
       margin-top: auto;
-      padding: 25px;
+      padding: 20px;
       color: white;
       font-size: 14px;
       font-weight: bold;
@@ -125,11 +130,15 @@
     <div class="name">MANISH MAURYA</div>
     <div class="pass-type">Student All route AC/Non AC</div>
     
-    <div class="blink-number"><span class="pass-label">Bus Pass No. </span>7502042368431</div>
+    <!-- Sirf Number Blinking Portion -->
+    <div class="pass-number-container">
+      <span class="pass-label">Bus Pass No. </span>
+      <span class="blink-number">7502042368431</span>
+    </div>
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- User Photo and Signature Section -->
+    <!-- Photo and Signature -->
     <div class="photo-sig-container">
       <img src="profile.jpg" class="user-img" alt="Photo">
       <img src="sig.png" class="sig-img" alt="Signature">
