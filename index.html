@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | e-Bus Pass</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #e0f2f1;
+      background-color: #e3f2fd;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
-    
     .header {
-      color: #00838f;
+      color: #1b8a90;
       font-size: 20px;
       font-weight: bold;
       margin: 15px 0 10px 0;
@@ -27,50 +29,36 @@
       padding: 10px 0;
     }
 
-    /* Main Pass Container */
+    /* Main Pass Box */
     .card {
       background-color: #ffffff;
+      /* Watermark: aapki upload ki hui dtc-watermark.png image repeat hogi */
+      background-image: url('dtc-watermark.png');
+      background-repeat: repeat;
+      background-size: 150px 80px;
       width: 92%;
-      max-width: 650px;
-      padding: 20px 15px 30px 15px;
+      max-width: 600px;
+      padding: 20px 15px 110px 15px; /* Bottom spacing for Sig & QR */
       position: relative;
       text-align: center;
-      box-sizing: border-box;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border: 1px solid #ccc;
-      overflow: hidden;
-    }
-
-    /* Exact DTC Watermark Pattern (Logo + DTC Text) */
-    .watermark-overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      opacity: 0.12;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="90" viewBox="0 0 180 90"><g transform="rotate(-20 90 45)"><path fill="%23000" d="M15 25 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 M21 25 a6 6 0 1 1 12 0 a6 6 0 1 1 -12 0"/><text x="45" y="32" font-family="Arial" font-size="22" font-weight="bold" fill="%23000">DTC</text></g></svg>');
-      background-repeat: repeat;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .card-content {
-      position: relative;
-      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .main-title {
       color: #000;
       font-size: 20px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    /* Photo Center Above Name */
+    /* Center User Image */
     .user-img {
-      width: 160px;
-      height: 190px;
+      width: 150px;
+      height: 180px;
       object-fit: cover;
-      border: 1px solid #555;
-      margin: 5px auto 10px auto;
+      border: 1px solid #777;
+      margin: 0 auto 12px auto;
       display: block;
     }
 
@@ -82,14 +70,14 @@
     }
 
     .pass-type {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: bold;
       color: #000;
       margin-bottom: 12px;
     }
 
     .pass-number-container {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
       margin-bottom: 12px;
     }
@@ -98,9 +86,9 @@
       color: #000;
     }
 
-    /* Blinking Green Number */
+    /* Green Number Blinking */
     .blink-number {
-      color: #689f38;
+      color: #72b270;
       animation: blink 1s infinite;
     }
 
@@ -111,32 +99,33 @@
     }
 
     .validity {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: bold;
       color: #d32f2f;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
-    /* Bottom Left Signature */
+    /* Fixed Bottom Signature (Left Side) */
     .sig-container {
       position: absolute;
       left: 15px;
-      bottom: 10px;
+      bottom: 15px;
       text-align: center;
-      width: 130px;
+      width: 120px;
     }
     .sig-img {
-      width: 110px;
+      width: 100%;
       height: auto;
+      display: block;
     }
 
-    /* Bottom Right QR Code */
+    /* Fixed Bottom QR Code (Right Side) */
     .qr-code {
       position: absolute;
       right: 15px;
       bottom: 15px;
-      width: 90px;
-      height: 90px;
+      width: 85px;
+      height: 85px;
     }
 
     .footer {
@@ -145,6 +134,7 @@
       color: #333;
       font-size: 13px;
       font-style: italic;
+      text-align: center;
     }
   </style>
 </head>
@@ -153,35 +143,30 @@
   <div class="header">E- Bus Pass</div>
 
   <div class="card">
-    <!-- DTC Watermark Grid Layer -->
-    <div class="watermark-overlay"></div>
+    <div class="main-title">DTC And Cluster Bus Pass</div>
+    
+    <!-- User Photo -->
+    <img src="profile.jpg" class="user-img" alt="Photo">
 
-    <div class="card-content">
-      <div class="main-title">DTC And Cluster Bus Pass</div>
-      
-      <!-- Photo Above Name -->
-      <img src="profile.jpg" class="user-img" alt="Photo">
-
-      <!-- Name & Pass Details -->
-      <div class="name">Manish Maurya</div>
-      <div class="pass-type">Student All route AC/Non AC</div>
-      
-      <!-- Blinking Pass Number -->
-      <div class="pass-number-container">
-        <span class="pass-label">Bus Pass No. </span>
-        <span class="blink-number">7502042368431</span>
-      </div>
-      
-      <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
-
-      <!-- Bottom Signature -->
-      <div class="sig-container">
-        <img src="sig.png" class="sig-img" alt="Signature">
-      </div>
-
-      <!-- Bottom QR Code -->
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=7502042368431" class="qr-code" alt="QR">
+    <!-- Pass Info -->
+    <div class="name">Manish Maurya</div>
+    <div class="pass-type">Student All route AC/Non AC</div>
+    
+    <!-- Blinking Pass Number -->
+    <div class="pass-number-container">
+      <span class="pass-label">Bus Pass No. </span>
+      <span class="blink-number">7502042368431</span>
     </div>
+    
+    <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
+
+    <!-- Signature -->
+    <div class="sig-container">
+      <img src="sig.png" class="sig-img" alt="Signature">
+    </div>
+
+    <!-- QR Code -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=7502042368431" class="qr-code" alt="QR">
   </div>
 
   <div class="footer">
