@@ -30,22 +30,19 @@
       padding: 10px 0;
     }
 
-    /* Main Pass Card Box */
+    /* Pass Main Box with Repeated DTC Watermark */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
-      background-size: 160px 80px;
+      background-size: 150px 75px;
       width: 92%;
       max-width: 650px;
-      padding: 20px 20px 0 20px;
+      padding: 20px 20px 110px 20px; /* Space for bottom Sig and QR */
       position: relative;
       text-align: center;
       border: 1px solid #ddd;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .main-title {
@@ -55,13 +52,14 @@
       margin-bottom: 12px;
     }
 
-    /* Center Photo */
+    /* Profile Photo */
     .user-img {
       width: 160px;
-      height: 185px;
+      height: 180px;
       object-fit: cover;
-      border: 1px solid #777;
-      margin-bottom: 12px;
+      border: 1px solid #555;
+      margin: 0 auto 10px auto;
+      display: block;
     }
 
     .name {
@@ -88,7 +86,7 @@
       color: #000;
     }
 
-    /* Blinking Green Number */
+    /* Blinking Green Pass Number */
     .blink-number {
       color: #72b270;
       animation: blink 1s infinite;
@@ -104,41 +102,34 @@
       font-size: 20px;
       font-weight: bold;
       color: #d32f2f;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    /* Bottom Section with Black Top Line and Vertical Separator */
-    .bottom-section {
-      width: 100%;
+    /* Bottom Left Signature (Exact Size & Alignment) */
+    .sig-container {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      width: 110px;
+      height: 90px;
       display: flex;
-      border-top: 1px solid #000; /* Upper Black Line */
-      margin-top: 10px;
-    }
-
-    .sig-box {
-      flex: 1;
-      display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
-      padding: 10px;
-      border-right: 1px solid #000; /* Vertical Middle Separator Line */
     }
 
     .sig-img {
-      max-width: 140px;
+      width: 100%;
       height: auto;
+      max-height: 90px;
+      object-fit: contain;
       display: block;
     }
 
-    .qr-box {
-      width: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
+    /* Bottom Right QR Code (Exact Size & Alignment) */
     .qr-code {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
       width: 90px;
       height: 90px;
       display: block;
@@ -164,7 +155,7 @@
     <!-- User Photo -->
     <img src="profile.jpg" class="user-img" alt="Photo">
 
-    <!-- Pass Info -->
+    <!-- Pass Details -->
     <div class="name">Manish Maurya</div>
     <div class="pass-type">Student All route AC/Non AC</div>
     
@@ -176,15 +167,13 @@
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- Bottom Signature and QR Box with Separator Lines -->
-    <div class="bottom-section">
-      <div class="sig-box">
-        <img src="sig.png" class="sig-img" alt="Signature">
-      </div>
-      <div class="qr-box">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://deepakmaurya632.github.io/DTC_Bus_Pass/" class="qr-code" alt="QR">
-      </div>
+    <!-- Signature Bottom Left -->
+    <div class="sig-container">
+      <img src="sig.png" class="sig-img" alt="Signature">
     </div>
+
+    <!-- QR Code Bottom Right -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://deepakmaurya632.github.io/DTC_Bus_Pass/" class="qr-code" alt="QR">
   </div>
 
   <div class="footer">
