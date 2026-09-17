@@ -48,8 +48,8 @@
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 15px;
-      text-decoration: underline; /* टेक्स्ट के नीचे अंडरलाइन */
-      border-bottom: 1px solid #cccccc; /* पहले वाली हल्की लाइन */
+      text-decoration: underline;
+      border-bottom: 1px solid #cccccc;
       padding-bottom: 8px;
     }
 
@@ -76,10 +76,16 @@
       margin-bottom: 12px;
     }
 
+    /* एक ही लाइन में रखने के लिए अपडेटेड CSS */
     .pass-number-container {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
     }
 
     .pass-label {
