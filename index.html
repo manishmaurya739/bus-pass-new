@@ -30,7 +30,7 @@
       padding: 10px 0;
     }
 
-    /* Main Pass Container (Box) */
+    /* Main Pass Card Box */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -38,7 +38,7 @@
       background-size: 160px 80px;
       width: 92%;
       max-width: 650px;
-      padding: 20px 20px 15px 20px;
+      padding: 20px 20px 0 20px;
       position: relative;
       text-align: center;
       border: 1px solid #ddd;
@@ -55,7 +55,7 @@
       margin-bottom: 12px;
     }
 
-    /* Profile Photo */
+    /* Center Photo */
     .user-img {
       width: 160px;
       height: 185px;
@@ -88,7 +88,7 @@
       color: #000;
     }
 
-    /* Green Blinking Number */
+    /* Blinking Green Number */
     .blink-number {
       color: #72b270;
       animation: blink 1s infinite;
@@ -104,33 +104,43 @@
       font-size: 20px;
       font-weight: bold;
       color: #d32f2f;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
-    /* Bottom Row for Signature (Left) and QR Code (Right) Inside Box */
-    .bottom-row {
+    /* Bottom Section with Black Top Line and Vertical Separator */
+    .bottom-section {
       width: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      border-top: 1px solid #000; /* Upper Black Line */
       margin-top: 10px;
     }
 
-    .sig-container {
-      text-align: left;
-      width: 140px;
+    .sig-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-right: 1px solid #000; /* Vertical Middle Separator Line */
     }
 
     .sig-img {
-      width: 100%;
-      max-width: 130px;
+      max-width: 140px;
       height: auto;
       display: block;
     }
 
+    .qr-box {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
     .qr-code {
-      width: 85px;
-      height: 85px;
+      width: 90px;
+      height: 90px;
       display: block;
     }
 
@@ -154,7 +164,7 @@
     <!-- User Photo -->
     <img src="profile.jpg" class="user-img" alt="Photo">
 
-    <!-- Pass Details -->
+    <!-- Pass Info -->
     <div class="name">Manish Maurya</div>
     <div class="pass-type">Student All route AC/Non AC</div>
     
@@ -166,12 +176,14 @@
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- Inside Box Bottom Alignment for Signature & QR -->
-    <div class="bottom-row">
-      <div class="sig-container">
+    <!-- Bottom Signature and QR Box with Separator Lines -->
+    <div class="bottom-section">
+      <div class="sig-box">
         <img src="sig.png" class="sig-img" alt="Signature">
       </div>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://deepakmaurya632.github.io/DTC_Bus_Pass/" class="qr-code" alt="QR">
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://deepakmaurya632.github.io/DTC_Bus_Pass/" class="qr-code" alt="QR">
+      </div>
     </div>
   </div>
 
