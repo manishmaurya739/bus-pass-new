@@ -53,13 +53,36 @@
       padding-bottom: 8px;
     }
 
-    .user-img {
+    /* photo wrapper: iske upar watermark aayega */
+    .user-img-wrapper {
+      position: relative;
       width: 150px;
       height: 175px;
-      object-fit: cover;
-      border: 1px solid #666;
       margin: 0 auto 12px auto;
+      border: 1px solid #666;
+      overflow: hidden;
+    }
+
+    .user-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
+    }
+
+    /* Watermark Overlay */
+    .user-img-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('dtc-watermark.png');
+      background-repeat: repeat;
+      background-size: 150px 75px;
+      opacity: 0.4; /* watermark ko halka karne ke liye */
+      pointer-events: none;
     }
 
     .name {
@@ -76,7 +99,6 @@
       margin-bottom: 12px;
     }
 
-    /* नंबर को नीचे लाने के लिए अपडेटेड CSS */
     .pass-number-container {
       font-size: 22px;
       font-weight: bold;
@@ -170,7 +192,9 @@
   <div class="card">
     <div class="main-title">DTC And Cluster Bus Pass</div>
     
-    <img src="profile.jpg" class="user-img" alt="Photo">
+    <div class="user-img-wrapper">
+      <img src="profile.jpg" alt="Photo">
+    </div>
 
     <div class="name">Manish Maurya</div>
     <div class="pass-type">Student All route AC/Non AC</div>
