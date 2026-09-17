@@ -38,10 +38,10 @@
       background-size: 150px 75px;
       width: 92%;
       max-width: 650px;
-      padding: 20px 0 0 0; /* Padding inside card bottom managed by bottom-section */
+      padding: 20px 0 0 0;
       position: relative;
       text-align: center;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
     }
@@ -53,7 +53,7 @@
       margin-bottom: 12px;
     }
 
-    /* Center Photo */
+    /* Profile Photo */
     .user-img {
       width: 160px;
       height: 180px;
@@ -87,7 +87,7 @@
       color: #000;
     }
 
-    /* Blinking Green Number */
+    /* Green Blinking Number */
     .blink-number {
       color: #72b270;
       animation: blink 1s infinite;
@@ -106,23 +106,23 @@
       margin-bottom: 15px;
     }
 
-    /* Black Horizontal Line below Validity */
+    /* Black Horizontal Divider Line below Validity */
     .bottom-section {
       width: 100%;
       display: flex;
-      border-top: 1px solid #000; /* Validity ke niche black line */
+      border-top: 1.5px solid #000000 !important; /* Continuous Black Horizontal Line */
       margin-top: 10px;
       background: transparent;
     }
 
-    /* Left Signature Area */
+    /* Signature Box (Left Side) */
     .sig-box {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding: 10px 15px;
-      border-right: 1px solid #000; /* Vertical Black Line between Sig and QR */
+      border-right: 1.5px solid #000000 !important; /* Vertical Middle Line */
     }
 
     .sig-img {
@@ -133,9 +133,9 @@
       display: block;
     }
 
-    /* Right QR Code Area */
+    /* QR Code Box (Right Side) */
     .qr-box {
-      width: 110px;
+      width: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -165,14 +165,14 @@
   <div class="card">
     <div class="main-title">DTC And Cluster Bus Pass</div>
     
-    <!-- Profile Photo -->
+    <!-- User Photo -->
     <img src="profile.jpg" class="user-img" alt="Photo">
 
-    <!-- Pass Details -->
+    <!-- Pass Info -->
     <div class="name">Manish Maurya</div>
     <div class="pass-type">Student All route AC/Non AC</div>
     
-    <!-- Blinking Number -->
+    <!-- Blinking Pass Number -->
     <div class="pass-number-container">
       <span class="pass-label">Bus Pass No. </span>
       <span class="blink-number">7502042368431</span>
@@ -180,7 +180,7 @@
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- Black Divider Border Lines Section -->
+    <!-- Black Border Section for Signature & QR Code -->
     <div class="bottom-section">
       <div class="sig-box">
         <img src="sig.png" class="sig-img" alt="Signature">
