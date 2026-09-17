@@ -29,16 +29,15 @@
       padding: 10px 0;
     }
 
-    /* Main Pass Box */
+    /* Pass Box */
     .card {
       background-color: #ffffff;
-      /* Watermark: aapki upload ki hui dtc-watermark.png image repeat hogi */
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
       background-size: 150px 80px;
       width: 92%;
       max-width: 600px;
-      padding: 20px 15px 110px 15px; /* Bottom spacing for Sig & QR */
+      padding: 20px 15px 120px 15px; /* Bottom space for Sig & QR */
       position: relative;
       text-align: center;
       border: 1px solid #ccc;
@@ -52,7 +51,7 @@
       margin-bottom: 12px;
     }
 
-    /* Center User Image */
+    /* Photo Center Above Name */
     .user-img {
       width: 150px;
       height: 180px;
@@ -86,7 +85,7 @@
       color: #000;
     }
 
-    /* Green Number Blinking */
+    /* Blinking Pass Number */
     .blink-number {
       color: #72b270;
       animation: blink 1s infinite;
@@ -105,13 +104,13 @@
       margin-bottom: 15px;
     }
 
-    /* Fixed Bottom Signature (Left Side) */
+    /* Bottom Left Signature */
     .sig-container {
       position: absolute;
       left: 15px;
       bottom: 15px;
       text-align: center;
-      width: 120px;
+      width: 130px;
     }
     .sig-img {
       width: 100%;
@@ -119,7 +118,7 @@
       display: block;
     }
 
-    /* Fixed Bottom QR Code (Right Side) */
+    /* Bottom Right Dynamic Web QR */
     .qr-code {
       position: absolute;
       right: 15px;
@@ -165,8 +164,8 @@
       <img src="sig.png" class="sig-img" alt="Signature">
     </div>
 
-    <!-- QR Code -->
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=7502042368431" class="qr-code" alt="QR">
+    <!-- Web Link QR Code -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://deepakmaurya632.github.io/DTC_Bus_Pass/" class="qr-code" alt="QR">
   </div>
 
   <div class="footer">
