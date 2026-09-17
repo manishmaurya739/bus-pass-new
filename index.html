@@ -12,7 +12,6 @@
     }
     body {
       font-family: Arial, sans-serif;
-      /* Main Background Colors (Sky Blue Theme) */
       background-color: #e0f2f1;
       display: flex;
       flex-direction: column;
@@ -31,7 +30,6 @@
       padding: 12px 0;
     }
 
-    /* Main Card Box */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -46,17 +44,14 @@
     }
 
     .main-title {
-  color: #00838f; /* या #00a8cc */
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  
-  /* नीचे रेखा जोड़ने के लिए: */
-  border-bottom: 1px solid #cccccc; /* पतली ग्रे लाइन */
-  padding-bottom: 8px;            /* टेक्स्ट और लाइन के बीच थोड़ी जगह */
-}
+      color: #00838f;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00838f; /* Sky Blue Line */
+      padding-bottom: 8px;
+    }
 
-    /* Profile Image */
     .user-img {
       width: 150px;
       height: 175px;
@@ -90,7 +85,6 @@
       color: #000000;
     }
 
-    /* Blinking Green Number */
     .blink-number {
       color: #5cb85c;
       animation: blink 1s infinite;
@@ -109,11 +103,10 @@
       margin-bottom: 15px;
     }
 
-    /* Light Grey/Black Borders (Original Jaise Halki Line) */
     .bottom-section {
       width: 100%;
       display: flex;
-      border-top: 1px solid #cccccc; /* Halki Horizontal Line */
+      border-top: 1px solid #cccccc;
       background: transparent;
     }
 
@@ -123,7 +116,7 @@
       align-items: center;
       justify-content: center;
       padding: 10px;
-      border-right: 1px solid #cccccc; /* Halki Vertical Dividing Line */
+      border-right: 1px solid #cccccc;
     }
 
     .sig-img {
@@ -148,7 +141,6 @@
       display: block;
     }
 
-    /* Dark Teal Bottom Footer Area */
     .footer-wrapper {
       width: 100%;
       background-color: #00838f;
@@ -169,16 +161,13 @@
   <div class="header">E- Bus Pass</div>
 
   <div class="card">
-    <div class="main-title header">DTC And Cluster Bus Pass</div>
+    <div class="main-title">DTC And Cluster Bus Pass</div>
     
-    <!-- User Image -->
     <img src="profile.jpg" class="user-img" alt="Photo">
 
-    <!-- Pass Info -->
     <div class="name">Manish Maurya</div>
     <div class="pass-type">Student All route AC/Non AC</div>
     
-    <!-- Blinking Pass Number -->
     <div class="pass-number-container">
       <span class="pass-label">Bus Pass No. </span>
       <span class="blink-number">7502042368431</span>
@@ -186,7 +175,6 @@
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
 
-    <!-- Light Border Section for Signature and QR Code -->
     <div class="bottom-section">
       <div class="sig-box">
         <img src="sig.png" class="sig-img" alt="Signature">
@@ -197,7 +185,6 @@
     </div>
   </div>
 
-  <!-- Bottom Dark Teal Background Area -->
   <div class="footer-wrapper">
     <div class="footer">
       Copyright &#65533; - Delhi e-Governance Society 2026
