@@ -10,56 +10,49 @@
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e0f2f1;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e6f7f7;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
 
+    /* Top Title Header */
     .header {
-      color: #00838f;
-      font-size: 20px;
+      color: #2c9fa7;
+      font-size: 22px;
       font-weight: bold;
+      margin-top: 15px;
       margin-bottom: 20px;
-      background: #ffffff;
       width: 100%;
       text-align: center;
-      padding: 12px 0;
     }
 
+    /* Main Card Container */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
-      background-size: 150px 75px;
-      width: 92%;
-      max-width: 550px;
-      padding-top: 20px;
+      background-size: 140px 70px;
+      width: 95%;
+      max-width: 580px;
+      padding: 25px 20px 0 20px;
       text-align: center;
-      border: 1px solid #ccc;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid #dcdcdc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: relative;
     }
 
-    .main-title {
-      color: #00838f;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      text-decoration: underline;
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 8px;
-    }
-
-    /* photo wrapper */
+    /* User Profile Image Wrapper */
     .user-img-wrapper {
       position: relative;
-      width: 150px;
+      width: 155px;
       height: 175px;
-      margin: 0 auto 12px auto;
-      border: 1px solid #666;
+      margin: 0 auto 15px auto;
+      border: 1px solid #555;
       overflow: hidden;
     }
 
@@ -70,7 +63,7 @@
       display: block;
     }
 
-    /* Watermark Overlay */
+    /* Watermark Overlay on User Image */
     .user-img-wrapper::after {
       content: "";
       position: absolute;
@@ -80,77 +73,72 @@
       height: 100%;
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
-      background-size: 150px 75px;
-      opacity: 0.4;
+      background-size: 140px 70px;
+      opacity: 0.35;
       pointer-events: none;
     }
 
+    /* Details Styling */
     .name {
-      font-size: 22px;
-      font-weight: bold;
-      color: #000000;
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
       margin-bottom: 12px;
+      letter-spacing: 0.3px;
     }
 
     .pass-type {
       font-size: 20px;
-      font-weight: bold;
-      color: #000000;
-      margin-bottom: 12px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 16px;
     }
 
+    /* Pass Number Section (Matched to Original) */
     .pass-number-container {
-      font-size: 22px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pass-number {
+      color: #292929; /* Exact dark tone matching official pass */
       font-weight: bold;
-      margin-bottom: 12px;
-      display: block;
-      text-align: center;
     }
 
-    .pass-label {
-      color: #000000;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .blink-number {
-      color: #5cb85c;
-      display: block;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
+    /* Validity Text Styling */
     .validity {
       font-size: 20px;
-      font-weight: bold;
-      color: #d9534f;
-      margin-bottom: 15px;
+      font-weight: 700;
+      color: #c91d24; /* Exact Red Tone */
+      margin-bottom: 25px;
     }
 
+    /* Bottom Section for Signature & QR */
     .bottom-section {
       width: 100%;
       display: flex;
-      border-top: 1px solid #cccccc;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px 15px 10px;
       background: transparent;
     }
 
     .sig-box {
       width: 50%;
       display: flex;
+      justify-content: flex-start;
       align-items: center;
-      justify-content: center;
-      padding: 10px;
-      border-right: 1px solid #cccccc;
     }
 
     .sig-img {
-      max-width: 130px;
-      max-height: 80px;
+      max-width: 140px;
+      max-height: 85px;
       width: auto;
       height: auto;
       display: block;
@@ -159,22 +147,22 @@
     .qr-box {
       width: 50%;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: center;
-      padding: 10px;
     }
 
     .qr-code {
-      width: 85px;
-      height: 85px;
+      width: 90px;
+      height: 90px;
       display: block;
     }
 
+    /* Footer Wrapper */
     .footer-wrapper {
       width: 100%;
-      background-color: #00838f;
+      background-color: #2c9fa7;
       margin-top: auto;
-      padding: 25px 0;
+      padding: 18px 0;
       text-align: center;
     }
 
@@ -190,8 +178,6 @@
   <div class="header">E- Bus Pass</div>
 
   <div class="card">
-    <div class="main-title">DTC And Cluster Bus Pass</div>
-    
     <div class="user-img-wrapper">
       <img src="my-profile.jpg" alt="Photo">
     </div>
@@ -200,8 +186,8 @@
     <div class="pass-type">Student All route AC/Non AC</div>
     
     <div class="pass-number-container">
-      <span class="pass-label">Bus Pass No.</span>
-      <span class="blink-number">7502042368431</span>
+      <span>Bus Pass No.</span>
+      <span class="pass-number">7502042368431</span>
     </div>
     
     <div class="validity">Valid from 15/09/2026 to 14/12/2026</div>
@@ -211,7 +197,6 @@
         <img src="sig.png" class="sig-img" alt="Signature">
       </div>
       <div class="qr-box">
-        <!-- Local QR code image uploaded file -->
         <img src="qr.png" class="qr-code" alt="QR Code">
       </div>
     </div>
