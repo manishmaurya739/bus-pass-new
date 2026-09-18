@@ -11,6 +11,12 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #e0f2f1;
@@ -27,15 +33,14 @@
       font-size: 22px;
       font-weight: bold;
       font-family: "Times New Roman", Times, serif;
-      margin-top: 15px;
-      margin-bottom: 20px;
       background: #ffffff;
       width: 100%;
       text-align: center;
       padding: 12px 0;
+      margin-bottom: 20px;
     }
 
-    /* Pass Container Box Exact Dimensions & Shadow */
+    /* Pass Container Box Exact Dimensions & Alignment */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -47,7 +52,7 @@
       text-align: center;
       border: 1px solid #cccccc;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
+      margin-bottom: auto; /* Footer ko viewport ke bilkul bottom me shift karega */
     }
 
     /* Pass Main Title */
@@ -181,13 +186,17 @@
       display: block;
     }
 
-    /* Footer Wrapper with exact viewport height spacing & color */
+    /* Green Patti Size Exact Fixed As Per Viewport Height */
     .footer-wrapper {
       width: 100%;
+      height: 28vh;
+      min-height: 180px;
       background-color: #00a2a6;
-      margin-top: auto;
-      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      margin-top: 30px;
     }
 
     .footer {
