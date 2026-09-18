@@ -10,9 +10,8 @@
       margin: 0;
       padding: 0;
     }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #e0f2f1;
       display: flex;
       flex-direction: column;
@@ -20,19 +19,17 @@
       min-height: 100vh;
     }
 
-    /* Top Navigation Header */
     .header {
-      color: #008d96;
+      color: #00838f;
       font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 25px;
+      font-weight: bold;
+      margin-bottom: 20px;
       background: #ffffff;
       width: 100%;
       text-align: center;
       padding: 12px 0;
     }
 
-    /* Main Pass Container */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -40,33 +37,29 @@
       background-size: 150px 75px;
       width: 92%;
       max-width: 550px;
-      padding: 25px 20px 0 20px;
+      padding-top: 20px;
       text-align: center;
-      border: 1px solid #d0d0d0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Exact Original "DTC And Cluster Bus Pass" Styling */
     .main-title {
-      color: #008d96;
-      font-size: 21px;
-      font-weight: 700;
-      margin-bottom: 18px;
+      color: #00838f;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
       text-decoration: underline;
-      text-underline-offset: 3px;
-      letter-spacing: 0.2px;
-      display: inline-block;
-      text-align: center;
-      width: 100%;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 8px;
     }
 
-    /* Profile Photo Wrapper */
+    /* photo wrapper */
     .user-img-wrapper {
       position: relative;
       width: 150px;
       height: 175px;
-      margin: 0 auto 14px auto;
-      border: 1px solid #555555;
+      margin: 0 auto 12px auto;
+      border: 1px solid #666;
       overflow: hidden;
     }
 
@@ -77,6 +70,7 @@
       display: block;
     }
 
+    /* Watermark Overlay */
     .user-img-wrapper::after {
       content: "";
       position: absolute;
@@ -87,29 +81,27 @@
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
       background-size: 150px 75px;
-      opacity: 0.35;
+      opacity: 0.4;
       pointer-events: none;
     }
 
-    /* Pass Holder Details */
     .name {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: bold;
       color: #000000;
       margin-bottom: 12px;
     }
 
     .pass-type {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: bold;
       color: #000000;
       margin-bottom: 12px;
     }
 
-    /* Bus Pass Number Section */
     .pass-number-container {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: bold;
       margin-bottom: 12px;
       display: block;
       text-align: center;
@@ -133,21 +125,18 @@
       100% { opacity: 1; }
     }
 
-    /* Validity Date Styling */
     .validity {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: bold;
       color: #d9534f;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    /* Bottom Section */
     .bottom-section {
       width: 100%;
       display: flex;
       border-top: 1px solid #cccccc;
       background: transparent;
-      margin-top: 10px;
     }
 
     .sig-box {
@@ -181,12 +170,11 @@
       display: block;
     }
 
-    /* Footer Section */
     .footer-wrapper {
       width: 100%;
-      background-color: #008d96;
+      background-color: #00838f;
       margin-top: auto;
-      padding: 22px 0;
+      padding: 25px 0;
       text-align: center;
     }
 
@@ -223,6 +211,7 @@
         <img src="sig.png" class="sig-img" alt="Signature">
       </div>
       <div class="qr-box">
+        <!-- Local QR code image uploaded file -->
         <img src="qr.png" class="qr-code" alt="QR Code">
       </div>
     </div>
