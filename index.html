@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #e0f2f1;
@@ -17,13 +18,16 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
+    /* Top Title Header */
     .header {
       color: #00a2a6;
       font-size: 22px;
       font-weight: bold;
       font-family: "Times New Roman", Times, serif;
+      margin-top: 15px;
       margin-bottom: 20px;
       background: #ffffff;
       width: 100%;
@@ -31,19 +35,22 @@
       padding: 12px 0;
     }
 
+    /* Pass Container Box Exact Dimensions & Shadow */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
       background-size: 150px 75px;
-      width: 92%;
+      width: 90%;
       max-width: 550px;
       padding-top: 20px;
       text-align: center;
-      border: 1px solid #ccc;
+      border: 1px solid #cccccc;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
     }
 
+    /* Pass Main Title */
     .main-title {
       color: #00a2a6;
       font-size: 22px;
@@ -56,7 +63,7 @@
       padding-bottom: 8px;
     }
 
-    /* photo wrapper */
+    /* Profile Photo Wrapper */
     .user-img-wrapper {
       position: relative;
       width: 150px;
@@ -73,7 +80,6 @@
       display: block;
     }
 
-    /* Watermark Overlay */
     .user-img-wrapper::after {
       content: "";
       position: absolute;
@@ -88,6 +94,7 @@
       pointer-events: none;
     }
 
+    /* Information Text Styles */
     .name {
       font-size: 22px;
       font-weight: bold;
@@ -135,6 +142,7 @@
       margin-bottom: 15px;
     }
 
+    /* Bottom Sign & QR Section */
     .bottom-section {
       width: 100%;
       display: flex;
@@ -173,15 +181,15 @@
       display: block;
     }
 
+    /* Footer Wrapper with exact viewport height spacing & color */
     .footer-wrapper {
       width: 100%;
       background-color: #00a2a6;
       margin-top: auto;
-      padding: 25px 0;
+      padding: 22px 0;
       text-align: center;
     }
 
-    /* Footer text color changed to exact black (#000000) */
     .footer {
       color: #000000;
       font-size: 15px;
