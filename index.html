@@ -10,26 +10,29 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #e0f2f1;
+      background-color: #e4f2f3;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
 
+    /* Top E- Bus Pass Header (Matching Vikas Verma Pass) */
     .header {
-      color: #00838f;
-      font-size: 20px;
+      color: #00a2b1;
+      font-size: 22px;
       font-weight: bold;
-      margin-bottom: 20px;
-      background: #ffffff;
+      margin-top: 20px;
+      margin-bottom: 25px;
       width: 100%;
       text-align: center;
-      padding: 12px 0;
+      background: transparent;
     }
 
+    /* Main Card Container */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -37,29 +40,32 @@
       background-size: 150px 75px;
       width: 92%;
       max-width: 550px;
-      padding-top: 20px;
+      padding: 25px 15px 0 15px;
       text-align: center;
-      border: 1px solid #ccc;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid #d1d1d1;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
+    /* DTC And Cluster Bus Pass Title (Exact Teal Color & Underline) */
     .main-title {
-      color: #00838f;
+      color: #00a2b1;
       font-size: 20px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-decoration: underline;
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 8px;
+      text-underline-offset: 4px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
     }
 
-    /* photo wrapper */
+    /* User Profile Image Wrapper */
     .user-img-wrapper {
       position: relative;
       width: 150px;
       height: 175px;
-      margin: 0 auto 12px auto;
-      border: 1px solid #666;
+      margin: 0 auto 15px auto;
+      border: 1px solid #555555;
       overflow: hidden;
     }
 
@@ -81,10 +87,11 @@
       background-image: url('dtc-watermark.png');
       background-repeat: repeat;
       background-size: 150px 75px;
-      opacity: 0.4;
+      opacity: 0.35;
       pointer-events: none;
     }
 
+    /* Pass Details Styling */
     .name {
       font-size: 22px;
       font-weight: bold;
@@ -129,7 +136,7 @@
       font-size: 20px;
       font-weight: bold;
       color: #d9534f;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .bottom-section {
@@ -137,6 +144,7 @@
       display: flex;
       border-top: 1px solid #cccccc;
       background: transparent;
+      margin-top: 10px;
     }
 
     .sig-box {
@@ -170,11 +178,12 @@
       display: block;
     }
 
+    /* Footer Wrapper */
     .footer-wrapper {
       width: 100%;
-      background-color: #00838f;
+      background-color: #00a2b1;
       margin-top: auto;
-      padding: 25px 0;
+      padding: 22px 0;
       text-align: center;
     }
 
@@ -211,7 +220,6 @@
         <img src="sig.png" class="sig-img" alt="Signature">
       </div>
       <div class="qr-box">
-        <!-- Local QR code image uploaded file -->
         <img src="qr.png" class="qr-code" alt="QR Code">
       </div>
     </div>
