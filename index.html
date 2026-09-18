@@ -10,8 +10,9 @@
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background-color: #e0f2f1;
       display: flex;
       flex-direction: column;
@@ -19,6 +20,7 @@
       min-height: 100vh;
     }
 
+    /* Top Navigation Header */
     .header {
       color: #00838f;
       font-size: 20px;
@@ -30,6 +32,7 @@
       padding: 12px 0;
     }
 
+    /* Main Pass Container */
     .card {
       background-color: #ffffff;
       background-image: url('dtc-watermark.png');
@@ -37,23 +40,26 @@
       background-size: 150px 75px;
       width: 92%;
       max-width: 550px;
-      padding-top: 20px;
+      padding-top: 0;
       text-align: center;
       border: 1px solid #ccc;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
 
+    /* "DTC And Cluster Bus Pass" Header Title Section */
     .main-title {
-      color: #00838f;
-      font-size: 20px;
+      color: #000000;
+      font-size: 22px;
       font-weight: bold;
-      margin-bottom: 15px;
-      text-decoration: underline;
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 8px;
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #dcdcdc;
+      text-decoration: none;
     }
 
-    /* photo wrapper */
+    /* Profile Photo Wrapper */
     .user-img-wrapper {
       position: relative;
       width: 150px;
@@ -70,7 +76,6 @@
       display: block;
     }
 
-    /* Watermark Overlay */
     .user-img-wrapper::after {
       content: "";
       position: absolute;
@@ -85,6 +90,7 @@
       pointer-events: none;
     }
 
+    /* Pass Holder Details */
     .name {
       font-size: 22px;
       font-weight: bold;
@@ -99,6 +105,7 @@
       margin-bottom: 12px;
     }
 
+    /* Bus Pass Number Styling */
     .pass-number-container {
       font-size: 22px;
       font-weight: bold;
@@ -125,6 +132,7 @@
       100% { opacity: 1; }
     }
 
+    /* Validity Text */
     .validity {
       font-size: 20px;
       font-weight: bold;
@@ -132,6 +140,7 @@
       margin-bottom: 15px;
     }
 
+    /* Bottom Section for Signature and QR */
     .bottom-section {
       width: 100%;
       display: flex;
@@ -170,6 +179,7 @@
       display: block;
     }
 
+    /* Footer Wrapper */
     .footer-wrapper {
       width: 100%;
       background-color: #00838f;
@@ -211,7 +221,6 @@
         <img src="sig.png" class="sig-img" alt="Signature">
       </div>
       <div class="qr-box">
-        <!-- Local QR code image uploaded file -->
         <img src="qr.png" class="qr-code" alt="QR Code">
       </div>
     </div>
