@@ -118,26 +118,25 @@
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 12px;
-      display: block;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
 
     .pass-label {
       color: #000000;
-      display: block;
-      margin-bottom: 4px;
     }
 
-    /* PERFECT COLOR & SHARP DTC BLINK */
+    /* Exact Dark Olive Color & Crisp On/Off Blink */
     .blink-number {
-      color: #5cb85c;
-      display: block;
-      animation: dtcBlink 0.6s infinite steps(1);
+      color: #5A7B2C;
+      animation: dtcBlink 0.5s infinite steps(1);
     }
 
     @keyframes dtcBlink {
-      0% { opacity: 1; }
-      50% { opacity: 0.15; }
+      0% { visibility: visible; }
+      50% { visibility: hidden; }
     }
 
     .validity {
