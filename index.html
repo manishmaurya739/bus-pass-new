@@ -128,16 +128,16 @@
       margin-bottom: 4px;
     }
 
-    /* DARK COLOR & EXACT HARD STEPS BLINK */
+    /* EXACT COLOR & BLINK MATCH */
     .blink-number {
-      color: #5A7B2C;
+      color: #7A9A3B;
       display: block;
-      animation: dtcBlink 0.5s steps(1) infinite;
+      animation: dtcBlink 0.8s infinite ease-in-out;
     }
 
     @keyframes dtcBlink {
-      0% { visibility: visible; }
-      50% { visibility: hidden; }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.25; }
     }
 
     .validity {
