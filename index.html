@@ -1,4 +1,41 @@
-<!DOCTYPE html>
+[9:19 pm, 18/9/2026] Online: <!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | e-Bus Pass</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f2f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Top Title Header */
+    .header {
+      color: #00a2a6;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      background: #ffffff;
+      width: 100%;…
+[11:58 am, 20/9/2026] Online: <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
@@ -118,25 +155,26 @@
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+      display: block;
+      text-align: center;
     }
 
     .pass-label {
       color: #000000;
+      display: block;
+      margin-bottom: 4px;
     }
 
-    /* Exact Dark Olive Color & Crisp On/Off Blink */
     .blink-number {
-      color: #5A7B2C;
-      animation: dtcBlink 0.5s infinite steps(1);
+      color: #5cb85c;
+      display: block;
+      animation: blink 1s infinite;
     }
 
-    @keyframes dtcBlink {
-      0% { visibility: visible; }
-      50% { visibility: hidden; }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .validity {
@@ -198,6 +236,7 @@
       margin-top: 30px;
     }
 
+    /* Screen text style: Copyright  - Delhi e-Governance Society 2026 */
     .footer {
       color: #000000;
       font-size: 14px;
