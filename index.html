@@ -128,17 +128,16 @@
       margin-bottom: 4px;
     }
 
-    /* सिर्फ यह कलर बदला गया है */
+    /* Smooth and exact speed blink effect */
     .blink-number {
-      color: #81A540;
+      color: #5cb85c;
       display: block;
-      animation: blink 1s infinite;
+      animation: blink 1.8s infinite ease-in-out;
     }
 
     @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.15; }
     }
 
     .validity {
@@ -200,7 +199,6 @@
       margin-top: 30px;
     }
 
-    /* Screen text style: Copyright  - Delhi e-Governance Society 2026 */
     .footer {
       color: #000000;
       font-size: 14px;
