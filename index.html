@@ -124,20 +124,20 @@
 
     .pass-label {
       color: #000000;
-      display: inline-block;
-      margin-right: 6px;
+      display: block;
+      margin-bottom: 4px;
     }
 
-    /* EXACT DARK COLOR & FAST INSTANT BLINK */
     .blink-number {
-      color: #3d6118;
-      display: inline-block;
-      animation: dtcBlink 0.4s steps(1) infinite;
+      color: #5cb85c;
+      display: block;
+      animation: blink 1s infinite;
     }
 
-    @keyframes dtcBlink {
-      0% { visibility: visible; }
-      50% { visibility: hidden; }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .validity {
@@ -199,6 +199,7 @@
       margin-top: 30px;
     }
 
+    /* Screen text style: Copyright  - Delhi e-Governance Society 2026 */
     .footer {
       color: #000000;
       font-size: 14px;
